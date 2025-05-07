@@ -3,19 +3,24 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                echo 'Clonando código desde GitHub'
                 git url: 'https://github.com/adolfomramirez/frontend-repo.git', branch: 'develop'
             }
         }
-        stage('Build') {
+        stage('Install Dependencies') {
             steps {
-                echo 'Construyendo backend...'
+                sh 'npm install'
             }
         }
         stage('Test') {
             steps {
-                echo 'Ejecutando pruebas...'
+                sh 'npm test'
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t frontend-image .'
             }
         }
     }
 }
+
