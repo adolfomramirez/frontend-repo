@@ -1,0 +1,21 @@
+[0;1;32m●[0m jenkins.service - Jenkins Continuous Integration Server
+     Loaded: loaded (]8;;file://proyectofinal/usr/lib/systemd/system/jenkins.service/usr/lib/systemd/system/jenkins.service]8;;; [0;1;32menabled[0m; preset: [0;1;32menabled[0m)
+     Active: [0;1;32mactive (running)[0m since Wed 2025-05-07 08:08:40 UTC; 3s ago
+ Invocation: c9501ab4f69d47bb85c65f03e69be3fd
+   Main PID: 34778 (java)
+      Tasks: 45 (limit: 2318)
+     Memory: 385.5M (peak: 385.8M)
+        CPU: 22.238s
+     CGroup: /system.slice/jenkins.service
+             └─[0;38;5;245m34778 /usr/bin/java -Djava.awt.headless=true -jar /usr/share/java/jenkins.war --webroot=/var/cache/jenkins/war --httpPort=8080[0m
+
+May 07 08:08:35 proyectofinal jenkins[34778]: 2025-05-07 08:08:35.541+0000 [id=30]        INFO        jenkins.InitReactorRunner$1#onAttained: Started all plugins
+May 07 08:08:36 proyectofinal jenkins[34778]: 2025-05-07 08:08:36.711+0000 [id=17]        INFO        h.p.b.g.GlobalTimeOutConfiguration#load: global timeout not set
+May 07 08:08:38 proyectofinal jenkins[34778]: 2025-05-07 08:08:38.503+0000 [id=29]        INFO        jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+May 07 08:08:40 proyectofinal jenkins[34778]: 2025-05-07 08:08:40.101+0000 [id=29]        INFO        jenkins.InitReactorRunner$1#onAttained: System config loaded
+May 07 08:08:40 proyectofinal jenkins[34778]: 2025-05-07 08:08:40.299+0000 [id=29]        INFO        jenkins.InitReactorRunner$1#onAttained: System config adapted
+May 07 08:08:40 proyectofinal jenkins[34778]: 2025-05-07 08:08:40.324+0000 [id=29]        INFO        jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+May 07 08:08:40 proyectofinal jenkins[34778]: 2025-05-07 08:08:40.332+0000 [id=29]        INFO        jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+May 07 08:08:40 proyectofinal jenkins[34778]: 2025-05-07 08:08:40.594+0000 [id=30]        INFO        jenkins.InitReactorRunner$1#onAttained: Completed initialization
+May 07 08:08:40 proyectofinal jenkins[34778]: 2025-05-07 08:08:40.776+0000 [id=23]        INFO        hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+May 07 08:08:40 proyectofinal systemd[1]: Started jenkins.service - Jenkins Continuous Integration Server.
